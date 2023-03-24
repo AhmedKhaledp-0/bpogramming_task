@@ -41,5 +41,25 @@ int main (void)
 		thetanrad = thetandeg * M_PI / 180.0;
 		result = first_v * second_v * cos(thetanrad);
 		printf("the scalar product is %f",result);
+	}else if (task == 3)
+	{
+		int loop, times;
+		float i, j, k, sumofi, sumofj, sumofk;
+
+		printf("how many vectors you want to add \n");
+		scanf("%d", &times);
+		for (loop=1;loop <= times;loop ++)
+		{
+			printf("i component of vector %d ",loop);
+			scanf("%f", &i);
+			printf("j component of vector %d ",loop);
+			scanf("%f", &j);
+			printf("k component of vector %d ",loop);
+			scanf("%f", &k);
+			sumofi = sumofi + i;
+			sumofj = sumofj + j;
+			sumofk = sumofk + k;
+		}
+		printf("the result is %f i %f j %f k ",sumofi,sumofj,sumofk);
 	}
 }
