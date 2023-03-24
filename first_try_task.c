@@ -60,6 +60,6 @@ int main (void)
 			sumofj = sumofj + j;
 			sumofk = sumofk + k;
 		}
-		printf("the result is %f i %f j %f k ",sumofi,sumofj,sumofk);
+		printf("the result is %.2f i %.2f j %.2f k ",sumofi,sumofj,sumofk);
 	}
 }
