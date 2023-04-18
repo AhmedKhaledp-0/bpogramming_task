@@ -1,5 +1,5 @@
 # programming task
-,,,
+```
 1:Cross product
 2:scalar multiplication
 3:adding vectors
@@ -11,9 +11,10 @@
 9:Newton third law
 10:finding angulat velocity from velocity
 11:inding angulat acceleration from velocity
-,,,
+```
 ### members
 <div align="left">
+
 > أحمد خالد فتحي
 
 > عبد اللطبف محمود عبد اللطيف
@@ -29,4 +30,5 @@
 > حسنين
 
 > رانيا جمهة
+
 </div>
