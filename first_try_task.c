@@ -5,6 +5,7 @@
  * Return: always0
  */
 int choose_mission(int task);
+int the_mission(int task);
 int cross_product(void);
 int scalar_product(void);
 int vector_adding(void);
@@ -16,10 +17,43 @@ int N_S_L(void);
 int N_T_L(void);
 int Linear_V_2_angularw(void);
 int Linear_V_2_angularA(void);
+int decide(void);
 
 int main(void)
 {
+	printf("chose the task you want to do \n");
+
 	int task = choose_mission(task);
+	the_mission(task);
+	
+	
+}
+int choose_mission(int task)
+{
+	printf("    Vector operations\n");
+	printf("\t1:Cross product\n");
+	printf("\t2:scalar multiplication\n");
+	printf("\t3:adding vectors\n");
+	printf("\t4:Subtraction vectors\n");
+	printf("\t5:vector magnitude\n");
+	printf("\t6:vector direction\n");
+	printf("    Newton's laws\n");
+	printf("\t7:Newton first law\n");
+	printf("\t8:Newton second law\n");
+	printf("\t9:Newton third law\n");
+	//printf("    Deriving\n");
+	//printf("\t10:deriving velocity from distance\n");
+	//printf("\t11:deriving acceleration from velocity\n");
+	//printf("\t12:deriving acceleration from distance\n");
+	printf("    Linear to angular\n");
+	printf("\t10:finding angulat velocity from velocity\n");
+	printf("\t11:inding angulat acceleration from velocity \n");
+	scanf("%d", &task);
+	return(task);
+}
+int the_mission(int task)
+{
+	//int task;
 
 	if (task == 1)
 	{
@@ -57,31 +91,14 @@ int main(void)
 	{
 		N_T_L();
 	}
-	else if (task == 13)
+	else if (task == 10)
 	{
 		Linear_V_2_angularw();
 	}
-	else if (task == 14)
+	else if (task == 11)
 	{
 		Linear_V_2_angularA();
 	}
-}
-int choose_mission(int task)
-{
-	printf("chose the task you want to do \n");
-	printf("    Vector operations\n");
-	printf("\t1:Cross product\n");
-	printf("\t2:scalar multiplication\n");
-	printf("\t3:adding vectors\n");
-	printf("\t4:Subtraction vectors\n");
-	printf("\t5:vector magnitude\n");
-	printf("\t6:vector direction\n");
-	printf("    Newton's laws\n");
-	printf("\t7:Newton first law\n");
-	printf("\t8:Newton second law\n");
-	printf("\t9:Newton third law\n");
-	scanf("%d", &task);
-	return(task);
 }
 int cross_product(void)
 {
@@ -97,6 +114,7 @@ int cross_product(void)
 	thetanrad = thetandeg * M_PI / 180.0;
 	result = first_v * second_v * sin(thetanrad);
 	printf("the cross product is %f", result);
+	decide();
 
 }
 int scalar_product(void)
@@ -113,6 +131,7 @@ int scalar_product(void)
 	thetanrad = thetandeg * M_PI / 180.0;
 	result = first_v * second_v * cos(thetanrad);
 	printf("the scalar product is %f", result);
+	decide();
 }
 int vector_adding(void)
 {
@@ -134,6 +153,7 @@ int vector_adding(void)
 	{
 		printf("%.2f  \t ", result[j]);
 	}
+	decide();
 }
 int vector_substraction(void)
 {
@@ -157,35 +177,35 @@ int vector_substraction(void)
 	{
 		printf("%.2f  \t ",result[j]);
 	}
+	decide();
 }
 int vector_magnitude(void)
 {
 	float i_comp, j_comp, k_comp, magnitude;
 	printf(" Enter the components of the vector \n");
-	scanf(" %f ", &i_comp);
-	scanf(" %f ", &j_comp);
-	scanf(" %f ", &k_comp);
+	scanf(" %f %f %f", &i_comp, &j_comp, &k_comp);
 	magnitude = sqrt(pow(i_comp, 2) + pow(j_comp, 2) + pow(k_comp, 2));
 	printf("the magnitude of the vector = %.2f ", magnitude);
-
-
+	decide();
 }
 int vector_direction(void)
 {
 	float i_comp, j_comp, direction_rad, direction_deg ;
 
 	printf(" Enter the direction of 2D vector \n");
-	scanf(" %f ", &i_comp);
-	scanf(" %f ", &j_comp);
+	scanf(" %f %f", &i_comp, &j_comp);
+	//scanf(" %f ", &j_comp);
 	direction_rad = atan2(j_comp, i_comp);
 	direction_deg = direction_rad * 180.0 / M_PI;
 	printf("the direction of the 2D vector = %.2f ", direction_deg);
+	decide();
 }
 int N_F_L(void)
 {
 	printf("An object at rest remains at rest \n");
 	printf("An object in motion remains in motion at constant speed and in a straight line \n");
 	printf("Unless acted on by an unbalanced force \n");
+	decide();
 }
 int N_S_L(void)
 {
@@ -196,12 +216,14 @@ int N_S_L(void)
 	scanf("%f %f", &mass, &accelation);
 	force = mass * accelation;
 	printf("The force = %.2f \n ", force);
+	decide();
 }
 int N_T_L(void)
 {
 	printf("For every action in nature there is an equal and opposite reaction \n");
 	printf("If object A exerts a force on object B, object B also exerts an equal and opposite force on object A \n");
 	printf("Fb = -Fa \n ");
+	decide();
 }
 int Linear_V_2_angularw(void)
 {
@@ -212,6 +234,7 @@ int Linear_V_2_angularw(void)
 	scanf("%f %f", &v, &r);
 	w = v / r;
 	printf("The angular velocty = %.2f rad/sec ",w);
+	decide();
 }
 int Linear_V_2_angularA(void)
 {
@@ -222,5 +245,23 @@ int Linear_V_2_angularA(void)
 	scanf("%f %f %f", &v, &r, &t);
 	a = (v / r) / t;
 	printf("The angular acceleration = %.2f rad/sec^2 ",a);
+	decide();
+}
+int decide(void)
+{
+	int x;
+
+	printf("\nDo you want to do another mission 0 or 1 \t");
+	scanf("%d",&x);
+	if (x == 0)
+	{
+		int task = choose_mission(task);
+		the_mission(task);
+	}
+	else
+	{
+
+	}
+
 }
 
