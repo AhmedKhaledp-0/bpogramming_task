@@ -1,4 +1,5 @@
 # programming task
+## the codes written on c
 ```
 1:Cross product
 2:scalar multiplication
@@ -11,6 +12,12 @@
 9:Newton third law
 10:finding angulat velocity from velocity
 11:inding angulat acceleration from velocity
+```
+## the code witten on python
+```
+12:deriving velocity from distance
+13:deriving acceleration from distance
+14:D eriving acceleration from velocity
 ```
 ### members
 <div align="left">
