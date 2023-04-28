@@ -1,5 +1,6 @@
-# programming task
-## the codes written on c
+# Programming task
+## [Groub task](https://github.com/brokeninfp/bpogramming_task/blob/main/groub_task.c)
+### The codes written on c
 ```
 1:Cross product
 2:scalar multiplication
@@ -13,13 +14,13 @@
 10:finding angulat velocity from velocity
 11:inding angulat acceleration from velocity
 ```
-## the code witten on python
+### [The code witten on python](https://github.com/brokeninfp/bpogramming_task/blob/main/Derivative_distance.py)
 ```
-12:deriving velocity from distance
-13:deriving acceleration from distance
-14:D eriving acceleration from velocity
+12:Deriving velocity from distance
+13:Deriving acceleration from distance
+14:Deriving acceleration from velocity
 ```
-### members
+#### Members
 <div align="left">
 
 > أحمد خالد فتحي
@@ -36,6 +37,18 @@
 
 > حسنين
 
-> رانيا جمهة
+> رانيا جمعة
+## [Single membre tasks](https://github.com/brokeninfp/bpogramming_task/tree/main/4_tasks)
+### The codes written on c
+```
+1:Solve a quadratic equation using the quadratic formula
+2:Inverse of a Matrix
+3:Multiply 2 Matrices
+4:Multiplication tables
+```
+#### Members
+<div align="left">
 
+> أحمد خالد فتحي
 </div>
+
