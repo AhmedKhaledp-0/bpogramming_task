@@ -35,7 +35,7 @@ int main(void)
 	}
 	else if (spec < 0)
 	{
-		float  solution1, solution2, img, real;
+		float solution1, solution2, img, real;
 
 		real = -b / 2 * a;
 		img = sqrt(-spec) / 2 * a;
