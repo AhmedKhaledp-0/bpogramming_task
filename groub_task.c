@@ -108,20 +108,24 @@ int the_mission(int task)
  */
 int cross_product(void)
 {
-	float first_v, second_v, thetanrad, thetandeg, result;
-
-	printf("enter the two vectors as scale of A & B and THETA \n");
-	printf("\t first vector\t");
-	scanf("%f", &first_v);
-	printf("\t second vector\t");
-	scanf("%f", &second_v);
-	printf("\t theta\t");
-	scanf("%f", &thetandeg);
-	thetanrad = thetandeg * M_PI / 180.0;
-	result = first_v * second_v * sin(thetanrad);
-	printf("the cross product is %f", result);
+	float a[3][3];
+    int i = 0;
+    int j = 0;
+    for (i = 1; i < 3; i++)
+    {
+        printf("Your %d vector :\n", i);
+        for (j = 0; j < 3; j++)
+        {
+            printf("[%d][%d] : ", i, j);
+            scanf("%f", &a[i][j]);
+        }
+    }
+    float i_comp, j_comp, k_comp;
+    i_comp = (a[1][1] * a[2][2] - a[2][1] * a[1][2]);
+    j_comp = (a[1][0] * a[2][2] - a[2][0] * a[1][2]) * -1;
+    k_comp = (a[1][0] * a[2][1] - a[1][1] * a[2][0]);
+    printf("cross product = %.2f i %.2f j %.2f k", i_comp, j_comp, k_comp);
 	decide();
-
 }
 /**
  * scalar_product - function to scalar product  2 vectors
@@ -129,18 +133,29 @@ int cross_product(void)
  */
 int scalar_product(void)
 {
-	float first_v, second_v, thetanrad, thetandeg, result;
+	float f_vector[3], s_vector[3], result[3];
+    int i;
+    float dot;
 
-	printf("enter the two vectors as scale of A & B and THETA \n");
-	printf("\t first vector\t");
-	scanf("%f", &first_v);
-	printf("\t second vector\t");
-	scanf("%f", &second_v);
-	printf("\t theta\t");
-	scanf("%f", &thetandeg);
-	thetanrad = thetandeg * M_PI / 180.0;
-	result = first_v * second_v * cos(thetanrad);
-	printf("the scalar product is %f", result);
+    printf("Your first vector :\n", i);
+    for (i = 0; i < 3; i++)
+    {
+        scanf("%f", &f_vector[i]);
+    }
+    printf("Your second vector :\n", i);
+    for (i = 0; i < 3; i++)
+    {
+        scanf("%f", &s_vector[i]);
+    }
+    for (i = 0; i < 3; i++)
+    {
+        result[i] = f_vector[i] * s_vector[i];
+    }
+    for (i = 0; i < 3; i++)
+    {
+        dot += result[i];
+    }
+    printf("%f", dot);
 	decide();
 }
 /**
@@ -172,14 +187,14 @@ int vector_substraction(void)
 	float first_vector[3], second_vector[3], result[3];
 
 	printf("components of first vector i j k \n");
-	for (int i = 0 ; i < 3 ; i++)
+	for (int i = 0; i < 3; i++)
 		scanf("%f", &first_vector[i]);
 	printf("components of second vector i j k \n");
-	for (int i = 0 ; i < 3 ; i++)
+	for (int i = 0; i < 3; i++)
 		scanf("%f", &second_vector[i]);
 	for (int j = 0; j < 3; j++)
 		result[j] = first_vector[j] - second_vector[j];
-	for (int j = 0 ; j < 3 ; j++)
+	for (int j = 0; j < 3; j++)
 		printf("%.2f  \t", result[j]);
 	decide();
 }
@@ -221,7 +236,7 @@ int N_F_L(void)
 	printf("An object at rest remains at rest \n");
 	printf("An object in motion remains in motion \n");
 	printf("at constant speed in a straight line\n");
-	printf("Unless acted on by an unbalanced force \n");
+	printf("Unless it was acted on by an unbalanced force \n");
 	decide();
 }
 /**
