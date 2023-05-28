@@ -37,8 +37,13 @@ int main(void)
 	{
 		float solution1, solution2, img, real;
 
+
+
+
 		real = -b / 2 * a;
-		img = sqrt(-spec) / 2 * a;
+
+
+		img = sqrt((-spec)) / 2 * a;
 		printf("this equatino has two imagin solutions \n");
 		printf("first solution = %.2f + %.2f i \n", real, img);
 		printf("second solution = %.2f - %.2f i\n", real, img);

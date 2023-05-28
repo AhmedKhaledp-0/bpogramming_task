@@ -1,6 +1,6 @@
 from sympy import *
 t = symbols('t')
-deci = int(input("choce an operatin  \n1 - deriving velocity from distance\n2 - deriving acceleration from distance\n3 -Deriving acceleration from velocity\n "))
+deci = int(input("choce an operatin  \n1 - Deriving velocity from distance\n2 - Deriving acceleration from distance\n3- Deriving acceleration from velocity\n "))
 #func = input("enter the equation on t as a*t**2+b*t+c \n")
 #deci = int(input("do you want to print \n1 - the velocity equation \n2 - the velocity  \n3 - the acceleratio\n "))
 if deci == 1:
